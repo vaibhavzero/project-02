@@ -833,6 +833,14 @@
 </template>
 
 <script setup>
+
+useHead({
+  title: 'BMAI - Premium Makhana from Bihar to shelf',
+  meta: [
+    { name: 'description', content: 'BMAI offers premium makhana from Bihar to shelf with transparent processing, samples testing, and market consultation.' }
+  ]
+})
+
 import { ref } from 'vue'
 const mobileOpen = ref(false)
 
