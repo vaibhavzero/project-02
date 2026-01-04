@@ -6,22 +6,23 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-14 md:h-20">
           <div class="flex items-center gap-2">
-            <img src="../assets/imgs/logo.png" alt="" class="w-10 h-10 md:w-14 md:h-14">
-            <span class="text-xl md:text-2xl font-bold text-gray-900">BMAI</span>
+            <img src="../assets/imgs/logo.png" alt="" class="w-14 h-14 object-cover">
+            <div class="flex flex-col items-start">
+              <span class="text-md  font-bold text-gray-900">Bihar Makhana</span>
+              <span class="text-md font-bold text-gray-900">Agro Industries</span>
+            </div>
           </div>
           <div class="hidden md:flex items-center gap-8">
-            <button @click="scrollTo('services')"
+            <button @click="scrollTo('who-we-serve')"
               class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Services</button>
-            <button @click="scrollTo('process')"
-              class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Process</button>
+            <button @click="scrollTo('samples')"
+              class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Kit</button>
             <button @click="scrollTo('trust')"
               class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">About</button>
             <button @click="scrollTo('contact')"
               class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Contact</button>
-            <button @click="scrollTo('contact')"
-              class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2.5 rounded-full font-medium transition-all duration-200 hover:scale-105">
-              Get Started
-            </button>
+            <button @click="scrollTo('media')"
+              class="text-gray-600 hover:text-emerald-600 transition-colors font-medium">Media</button>
           </div>
           <!-- Mobile hamburger -->
           <div class="md:hidden">
@@ -55,50 +56,163 @@
     </USlideover>
 
     <!-- Modern Hero Section -->
-    <section class="min-h-[calc(100dvh-80px)] pt-20 px-4 flex items-center py-4 sm:py-4 md:py-4">
+    <section class="min-h-[calc(100dvh-80px)] pt-20 -mt-4 md:mt-16 px-4 flex items-center py-4 sm:py-4 md:py-4">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2  md:gap-10 lg:gap-12 items-center">
-          <!-- Image on top for mobile/md -->
+        <div class="grid lg:grid-cols-2 md:gap-10 lg:gap-16 items-center">
           <div class="lg:hidden relative mb-6 md:mb-8 mt-4 md:mt-0">
             <img
-              src="https://media.istockphoto.com/id/1334594420/photo/makhana-is-lotus-seeds-or-fox-nuts-used-to-preparing-various-foods-in-india.jpg?s=612x612&w=0&k=20&c=jaUb_emwnyOJWh506PO4Vy6y88tcZQObG0zyCvBypSQ="
-              alt="Makhana bowl" class="w-full h-48 md:h-56 object-cover rounded-2xl" />
-            <div
-              class="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-sm px-4 py-2 md:px-5 md:py-2.5 rounded-full border border-emerald-100 flex items-center gap-2 md:gap-2.5">
-              <UIcon name="i-heroicons-sparkles" class="text-emerald-600 text-base md:text-lg" />
-              <span class="text-xs md:text-sm font-semibold text-gray-900">Export-ready from day one</span>
-            </div>
+              src="../assets/imgs/makhana-boat.jpg"
+              alt="Makhana bowl" class="w-full h-64 md:h-56 object-cover rounded-2xl" />
+            
           </div>
 
-          <div class="space-y-4 md:space-y-5">
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight">
-              Your Makhana Partner from <span class="text-emerald-600">Bihar to Shelf</span>
-            </h1>
-            <p class="text-base md:text-lg text-gray-600">
-              Quality, size, variety—exactly what your market needs, delivered with zero guesswork.
-            </p>
+          <div class="space-y-4 md:space-y-4">
+            <div class="space-y-2 md:space-y-3">
+              <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                Reliable <span class="text-emerald-600">Makhana</span> <br class="hidden lg:block" /> Sourcing.
+              </h1>
+              <h2 class="text-lg md:text-xl lg:text-2xl font-medium text-gray-700 leading-relaxed">
+                Built for Brands & Enterprises That Care About Quality.
+              </h2>
+            </div>
 
-            <div class="flex gap-2 md:gap-3">
-              <UButton @click="scrollTo('contact')" color="success" variant="solid"
-                icon="i-heroicons-clipboard-document" class="text-sm md:text-base">
+            <div class="flex flex-wrap gap-2">
+              <UBadge label="Consistent Quality" color="success" variant="soft" size="md"
+                icon="i-heroicons-check-circle"
+                class="rounded-full font-semibold uppercase tracking-wider text-[10px] md:text-xs" />
+              <UBadge label="Market-Aligned Grades" color="success" variant="soft" size="md"
+                icon="i-heroicons-check-circle"
+                class="rounded-full font-semibold uppercase tracking-wider text-[10px] md:text-xs" />
+              <UBadge label="Reliable Supply Chain" color="success" variant="soft" size="md"
+                icon="i-heroicons-check-circle"
+                class="rounded-full font-semibold uppercase tracking-wider text-[10px] md:text-xs" />
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
+              <UButton @click="scrollTo('contact')" color="success" variant="solid" icon="i-heroicons-phone"
+                class="px-6 py-3 text-sm md:text-base font-semibold shadow-sm justify-center">
+                Talk to Our Sourcing Expert
+              </UButton>
+              <UButton @click="scrollTo('samples')" color="success" variant="ghost"
+                icon="i-heroicons-clipboard-document"
+                class="px-6 py-3 text-sm md:text-base font-semibold justify-center">
                 Request Sample
               </UButton>
-              <UButton @click="scrollTo('samples')" color="success" variant="ghost" icon="i-heroicons-phone"
-                class="text-sm md:text-base">
-                Book Call
-              </UButton>
             </div>
           </div>
 
-          <!-- Image on right for lg+ -->
-          <div class="hidden lg:block relative">
-            <img
-              src="https://media.istockphoto.com/id/1334594420/photo/makhana-is-lotus-seeds-or-fox-nuts-used-to-preparing-various-foods-in-india.jpg?s=612x612&w=0&k=20&c=jaUb_emwnyOJWh506PO4Vy6y88tcZQObG0zyCvBypSQ="
-              alt="Makhana bowl" class="w-full h-64 object-cover rounded-2xl" />
+          <div class="relative hidden lg:block order-1 lg:order-2 group align-center">
             <div
-              class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full border border-emerald-100 flex items-center gap-2">
-              <UIcon name="i-heroicons-sparkles" class="text-emerald-600 text-lg" />
-              <span class="text-sm font-semibold text-gray-900">Export-ready from day one</span>
+              class="absolute -inset-2 bg-emerald-200/30 rounded-2xl blur-xl group-hover:bg-emerald-300/40 transition-all duration-700">
+            </div>
+            <div class="relative">
+              <img src="../assets/imgs/makhana-boat.jpg" alt="Premium Makhana Production"
+                class="w-full aspect-[4/5] lg:aspect-[4/4] object-cover rounded-2xl shadow-xl border-2 border-white" />
+              <div
+                class="absolute -bottom-3 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-[-10%] bg-white p-2 rounded-lg shadow-lg border border-emerald-50 flex items-center gap-2 min-w-[160px]">
+                <div class="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <UIcon name="i-heroicons-sparkles" class="text-white text-lg" />
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-gray-900">500+ Businesses</p>
+                  <p class="text-[9px] text-gray-500">Trusted across India</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- problems -->
+
+    <!-- Pain Points / Problems Section -->
+    <section id="problems" class="py-24 bg-gradient-to-br from-emerald-50 to-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <UBadge color="emerald" variant="subtle" size="lg" class="mb-4" icon="i-heroicons-exclamation-triangle">
+            The Sourcing Reality
+          </UBadge>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
+            Why Sourcing Makhana Is Still a Challenge
+          </h2>
+          <p class="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+            Hidden inefficiencies in the supply chain can damage your brand credibility and shrink your margins.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+
+          <!-- Image Grid -->
+          <div class="grid grid-cols-2 gap-3 md:gap-4">
+            <div class="space-y-3 md:space-y-4">
+              <div
+                class="rounded-2xl overflow-hidden shadow-lg border-2 border-white hover:border-emerald-300 transition-all">
+                <img src="../assets/imgs/p-1.png" alt="Quality Issues" class="w-full  object-contain" />
+              </div>
+              <div
+                class="rounded-2xl overflow-hidden shadow-lg border-2 border-white hover:border-emerald-300 transition-all">
+                <img src="../assets/imgs/p-2.png" alt="Packaging Waste" class="w-full object-contain" />
+              </div>
+            </div>
+
+            <div class="space-y-3 md:space-y-4 pt-6 md:pt-8">
+              <div
+                class="rounded-2xl overflow-hidden shadow-lg border-2 border-white hover:border-emerald-300 transition-all">
+                <img src="../assets/imgs/p-3.png" alt="Supply Chain Gaps" class="w-full object-contain" />
+              </div>
+              <div
+                class="rounded-2xl overflow-hidden shadow-lg border-2 border-white hover:border-emerald-300 transition-all">
+                <img src="../assets/imgs/p-4.png" alt="Price Volatility" class="w-full object-contain" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Problems List -->
+          <div class="grid sm:grid-cols-1 gap-4 md:gap-6 mt-6 md:mt-0">
+            <div v-for="(item, index) in problems" :key="index"
+              class="group flex gap-3 md:gap-4 p-4 md:p-6 bg-white/50 backdrop-blur-sm rounded-2xl border border-emerald-100 hover:bg-white hover:shadow-xl transition-all duration-300">
+              <div
+                class="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-emerald-100 rounded-xl flex items-center justify-center group-hover:bg-emerald-500 transition-colors duration-300">
+                <UIcon :name="item.icon" class="text-emerald-600 group-hover:text-white text-xl md:text-2xl" />
+              </div>
+              <div>
+                <h3 class="text-base md:text-lg font-bold text-gray-900">{{ item.title }}</h3>
+                <p class="text-xs md:text-sm text-gray-600">{{ item.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-20">
+          <div
+            class="shadow-2xl rounded-2xl transition-all duration-300 border border-neutral-300 rounded-3xl text-black relative overflow-hidden grid lg:grid-cols-2 items-center">
+            <!-- Left: Image -->
+            <div class="relative h-64 lg:h-full">
+              <img src="../assets/imgs/cta-hero.png" alt="Reliable Makhana Supply"
+                class="absolute inset-0 w-full h-full object-cover">
+              <!-- Gradient overlay for readability -->
+            </div>
+
+            <!-- Right: Content -->
+            <div class="relative z-10 p-8 md:p-12">
+              <UBadge color="emerald" variant="subtle" size="lg" class="mb-4" icon="i-heroicons-light-bulb">
+                Ready to Eliminate These Pain Points?
+              </UBadge>
+              <h3 class="text-2xl md:text-3xl font-bold mb-4">
+                Join 500+ businesses who've secured their supply chain
+              </h3>
+              <p class="mb-8">
+                Experience the reliability of our standardized grading system and never worry about quality again.
+              </p>
+              <div class="flex flex-wrap gap-4 justify-center">
+                <UButton @click="scrollTo('contact')" color="success" size="xl" class="font-bold px-8">
+                  Get Risk-Free Consultation
+                </UButton>
+                <UButton variant="ghost" color="white" size="xl" icon="i-heroicons-phone">
+                  Call Expert
+                </UButton>
+              </div>
             </div>
           </div>
         </div>
@@ -107,9 +221,8 @@
 
 
 
-
     <!-- Who We Serve Section -->
-    <section class="py-8 pb-24 bg-gradient-to-b from-gray-50 to-white">
+    <section class="py-8 pb-24 bg-gradient-to-b from-gray-50 to-white" id="who-we-serve">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Header -->
         <div class="text-center mb-10">
@@ -129,19 +242,19 @@
 
         <!-- Services Grid -->
         <div class="grid lg:grid-cols-3 gap-8">
-          <!-- Wholesaler -->
+          <!-- Enterprises -->
           <div class="group shadow-2xl p-8 rounded-2xl transition-all duration-300 border border-neutral-300">
             <div class="space-y-6">
               <!-- Icon -->
               <div
                 class="inline-flex p-4 bg-success-500 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                <UIcon name="i-heroicons-building-storefront" class="text-white text-3xl" />
+                <UIcon name="i-heroicons-building-office-2" class="text-white text-3xl" />
               </div>
 
               <!-- Title & Stats -->
               <div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">Wholesalers</h3>
-                <UBadge color="success" variant="subtle" icon="i-heroicons-check-circle-solid">500+ Tons Monthly
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprises</h3>
+                <UBadge color="success" variant="subtle" icon="i-heroicons-check-circle-solid">100+ Tons Monthly
                 </UBadge>
 
               </div>
@@ -169,19 +282,19 @@
             </div>
           </div>
 
-          <!-- Retailer -->
+          <!-- Wholesalers -->
           <div
             class="group shadow-2xl p-8 rounded-2xl transition-all duration-300 border border-gray-100 border-neutral-300">
             <div class="space-y-6">
               <!-- Icon -->
               <div
                 class="inline-flex p-4 bg-info-500 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                <UIcon name="i-heroicons-shopping-cart" class="text-white text-3xl" />
+                <UIcon name="i-heroicons-building-storefront" class="text-white text-3xl" />
               </div>
 
               <!-- Title & Stats -->
               <div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">Retailers</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Wholesalers</h3>
                 <UBadge color="success" variant="subtle" icon="i-heroicons-check-circle-solid">50KG Min order</UBadge>
 
               </div>
@@ -204,26 +317,26 @@
               <!-- CTA -->
               <UButton block size="lg" variant="ghost" trailing-icon="i-heroicons-arrow-right"
                 @click="scrollTo('contact')" class="font-semibold text-black">
-                Explore Retail Options
+                Explore Wholesale Options
               </UButton>
             </div>
           </div>
 
 
 
-          <!-- Private Label -->
+          <!-- Brands -->
 
           <div class="group shadow-2xl p-8 rounded-2xl transition-all duration-300 border border-neutral-300">
             <div class="space-y-6">
               <!-- Icon -->
               <div
                 class="inline-flex p-4 bg-warning-500 rounded-xl group-hover:scale-110 transition-transform duration-300">
-                <UIcon name="i-heroicons-tag" class="text-white text-3xl" />
+                <UIcon name="i-heroicons-sparkles" class="text-white text-3xl" />
               </div>
 
               <!-- Title & Stats -->
               <div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-2">Private Label</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Brands</h3>
                 <UBadge color="success" variant="subtle" icon="i-heroicons-check-circle-solid">₹0 Upfront Cost</UBadge>
 
               </div>
@@ -249,7 +362,7 @@
               <!-- CTA -->
               <UButton block size="lg" variant="ghost" trailing-icon="i-heroicons-arrow-right"
                 @click="scrollTo('contact')" class="font-semibold text-black">
-                Start Your Brand
+                Launch Your Brand
               </UButton>
             </div>
           </div>
@@ -304,161 +417,49 @@
     </section>
 
     <!-- Why Choose BMAI Section -->
-    <section class="py-12 md:py-16 lg:py-24 bg-gray-50">
+    <section class="py-12 md:py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Header -->
-        <div class="text-center mb-8 md:mb-12 lg:mb-16">
-          <h2 class="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 md:mb-4">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
             Why Choose BMAI
           </h2>
-          <p class="text-sm md:text-lg text-gray-600 max-w-2xl mx-auto px-4">
-            Trusted expertise from Bihar's makhana heartland to your business success
+          <p class="text-base text-gray-600 max-w-xl mx-auto">
+            Trusted expertise from Bihar's makhana heartland to your business success.
           </p>
         </div>
 
-        <!-- Features - Mobile: Vertical List, Desktop: Zigzag Timeline -->
-        <div class="relative">
-          <!-- Central line - Hidden on mobile, visible on lg+ -->
-          <div
-            class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-emerald-300 via-amber-300 to-blue-300 transform -translate-x-1/2 rounded-full">
-          </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          <div v-for="(feature, idx) in features" :key="feature.title"
+            class="group p-6 rounded-2xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-xl hover:shadow-gray-200/50 transition-all duration-300">
 
-          <!-- Features -->
-          <div class="space-y-8 md:space-y-12 lg:space-y-24">
-            <div v-for="(feature, idx) in features" :key="feature.title" class="relative"
-              :class="['lg:flex lg:items-center', idx % 2 === 0 ? 'lg:flex-row-reverse' : '']">
-              <!-- Mobile/Tablet Layout -->
-              <div class="lg:hidden">
-                <div class="flex items-start gap-4 group">
-                  <!-- Icon -->
-                  <div :class="[
-                    'flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300',
-                    idx % 3 === 0 ? 'bg-emerald-100' : idx % 3 === 1 ? 'bg-amber-100' : 'bg-blue-100'
-                  ]">
-                    <UIcon :name="feature.icon" :class="[
-                      'text-2xl',
-                      idx % 3 === 0 ? 'text-emerald-600' : idx % 3 === 1 ? 'text-amber-600' : 'text-blue-600'
-                    ]" />
-                  </div>
-
-                  <!-- Content -->
-                  <div class="flex-1 space-y-2">
-                    <h3 class="text-xl md:text-2xl font-bold text-gray-900">
-                      {{ feature.title }}
-                    </h3>
-                    <p class="text-gray-600 leading-relaxed text-sm md:text-base">
-                      {{ feature.description }}
-                    </p>
-                  </div>
-                </div>
+            <div class="flex items-center gap-4 mb-4">
+              <div :class="[
+                'w-10 h-10 rounded-lg flex items-center justify-center shrink-0',
+                idx % 3 === 0 ? 'bg-emerald-100 text-emerald-600' : idx % 3 === 1 ? 'bg-amber-100 text-amber-600' : 'bg-blue-100 text-blue-600'
+              ]">
+                <UIcon :name="feature.icon" class="text-xl" />
               </div>
-
-              <!-- Desktop Zigzag Layout -->
-              <div class="hidden lg:block lg:w-1/2" :class="idx % 2 === 0 ? 'lg:pr-12 lg:text-right' : 'lg:pl-12'">
-                <div class="group hover:scale-105 transition-all duration-300">
-                  <div class="space-y-4">
-                    <div class="inline-flex items-center gap-3">
-                      <div :class="[
-                        'w-12 h-12 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300',
-                        idx % 3 === 0 ? 'bg-emerald-100' : idx % 3 === 1 ? 'bg-amber-100' : 'bg-blue-100'
-                      ]">
-                        <UIcon :name="feature.icon" :class="[
-                          'text-2xl',
-                          idx % 3 === 0 ? 'text-emerald-600' : idx % 3 === 1 ? 'text-amber-600' : 'text-blue-600'
-                        ]" />
-                      </div>
-                      <h3 class="text-2xl font-bold text-gray-900">
-                        {{ feature.title }}
-                      </h3>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed" :class="idx % 2 === 0 ? 'ml-auto max-w-md' : 'max-w-md'">
-                      {{ feature.description }}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Center dot - Desktop only -->
-              <div class="hidden lg:block absolute left-1/2 transform -translate-x-1/2 z-10">
-                <div :class="[
-                  'w-8 h-8 rounded-full border-4 border-white shadow-lg hover:scale-125 transition-all duration-300',
-                  idx % 3 === 0 ? 'bg-emerald-500' : idx % 3 === 1 ? 'bg-amber-500' : 'bg-blue-500'
-                ]"></div>
-              </div>
-
-              <!-- Visual side - Desktop only -->
-              <div class="hidden lg:block lg:w-1/2" :class="idx % 2 === 0 ? 'lg:pl-12' : 'lg:pr-12'">
-                <div class="relative h-48 rounded-2xl overflow-hidden group">
-                  <div class="absolute inset-0 bg-gradient-to-br" :class="[
-                    idx % 3 === 0 ? 'from-emerald-400/20 to-emerald-600/20' :
-                      idx % 3 === 1 ? 'from-amber-400/20 to-amber-600/20' :
-                        'from-blue-400/20 to-blue-600/20'
-                  ]"></div>
-                  <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="text-center space-y-2">
-                      <UIcon :name="feature.icon" class="text-6xl opacity-20" :class="[
-                        idx % 3 === 0 ? 'text-emerald-600' : idx % 3 === 1 ? 'text-amber-600' : 'text-blue-600'
-                      ]" />
-                      <div class="text-sm font-medium text-gray-500 uppercase tracking-wider">
-                        {{ feature.title.split(' ')[0] }}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <h3 class="font-bold text-gray-900 leading-tight">
+                {{ feature.title }}
+              </h3>
             </div>
+
+            <p class="text-sm text-gray-600 leading-relaxed">
+              {{ feature.description }}
+            </p>
           </div>
         </div>
 
-        <!-- Stats Grid -->
-        <div class="mt-12 md:mt-20 lg:mt-32">
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            <div v-for="(stat, idx) in stats" :key="stat.label" class="group relative">
-              <!-- Background effect -->
-              <div
-                class="absolute -inset-1 rounded-2xl bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                :class="[
-                  idx % 4 === 0 ? 'from-emerald-400 to-emerald-600' :
-                    idx % 4 === 1 ? 'from-amber-400 to-amber-600' :
-                      idx % 4 === 2 ? 'from-blue-400 to-blue-600' :
-                        'from-purple-400 to-purple-600'
-                ]"></div>
-
-              <!-- Card -->
-              <div
-                class="relative bg-white/90 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 text-center group-hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-center">
-                <!-- Icon -->
-                <div class="mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <UIcon
-                    :name="idx % 4 === 0 ? 'i-heroicons-arrow-trending-down' : idx % 4 === 1 ? 'i-heroicons-scale' : idx % 4 === 2 ? 'i-heroicons-shield-check' : 'i-heroicons-clock'"
-                    class="text-3xl md:text-4xl lg:text-5xl" :class="[
-                      idx % 4 === 0 ? 'text-emerald-600' :
-                        idx % 4 === 1 ? 'text-amber-600' :
-                          idx % 4 === 2 ? 'text-blue-600' :
-                            'text-purple-600'
-                    ]" />
-                </div>
-
-                <!-- Value -->
-                <div
-                  class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 group-hover:scale-110 transition-transform duration-300 mb-1">
-                  {{ stat.value }}
-                </div>
-
-                <!-- Label -->
-                <div
-                  class="text-xs md:text-sm font-semibold text-gray-600 group-hover:text-gray-900 transition-colors duration-300">
-                  {{ stat.label }}
-                </div>
-
-                <!-- Pulse indicator -->
-                <div class="absolute top-2 right-2 md:top-3 md:right-3 w-2 h-2 rounded-full animate-pulse" :class="[
-                  idx % 4 === 0 ? 'bg-emerald-400' :
-                    idx % 4 === 1 ? 'bg-amber-400' :
-                      idx % 4 === 2 ? 'bg-blue-400' :
-                        'bg-purple-400'
-                ]"></div>
-              </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-gray-100 pt-12">
+          <div v-for="(stat, idx) in stats" :key="stat.label" class="text-center px-4">
+            <div :class="[
+              'text-2xl md:text-3xl font-extrabold mb-1',
+              idx % 4 === 0 ? 'text-emerald-600' : idx % 4 === 1 ? 'text-amber-600' : idx % 4 === 2 ? 'text-blue-600' : 'text-purple-600'
+            ]">
+              {{ stat.value }}
+            </div>
+            <div class="text-xs font-bold uppercase tracking-wider text-gray-500">
+              {{ stat.label }}
             </div>
           </div>
         </div>
@@ -472,39 +473,52 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 md:mb-16 lg:mb-20">
           <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4 lg:mb-6">
-            Start Your Journey with Sample Kits
+            Start Your Makhana Journey with the Right Entry Plan
           </h2>
-          <p class="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">Test quality before you commit
-            to
-            bulk orders</p>
+          <p class="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+            Industry-ready starter kits designed for brands & enterprises planning to enter or scale in the makhana
+            business.
+          </p>
         </div>
 
         <div class="grid lg:grid-cols-3 gap-8">
+          <!-- ₹599 Industry Starter Sample Kit -->
           <div class="bg-white rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div class="text-center mb-8">
               <div class="text-4xl font-bold text-emerald-600 mb-2">₹599</div>
-              <div class="text-gray-600 font-medium">Starter Kit</div>
+              <div class="text-gray-600 font-medium">Industry Starter Sample Kit</div>
+            </div>
+            <div class="mb-6">
+              <p class=" text-center text-sm text-gray-600">First-time explorers & early-stage research</p>
             </div>
             <ul class="space-y-4 mb-8">
               <li class="flex items-start gap-3">
                 <UIcon name="i-heroicons-check" class="text-emerald-500 flex-shrink-0 mt-1" />
-                <span class="text-gray-700 text-sm">Basic grade samples</span>
+                <span class="text-gray-700 text-sm">Total <strong>500 g sample kit</strong> (10 variants × 50 g each —
+                  assorted grades)</span>
               </li>
               <li class="flex items-start gap-3">
                 <UIcon name="i-heroicons-check" class="text-emerald-500 flex-shrink-0 mt-1" />
-                <span class="text-gray-700 text-sm">2-3 product varieties</span>
+                <span class="text-gray-700 text-sm">Helps understand <strong>size, quality & grading
+                    differences</strong></span>
               </li>
               <li class="flex items-start gap-3">
                 <UIcon name="i-heroicons-check" class="text-emerald-500 flex-shrink-0 mt-1" />
-                <span class="text-gray-700 text-sm">Basic specifications</span>
+                <span class="text-gray-700 text-sm">Ideal for <strong>basic product evaluation & internal
+                    testing</strong></span>
+              </li>
+              <li class="flex items-start gap-3">
+                <UIcon name="i-heroicons-check" class="text-emerald-500 flex-shrink-0 mt-1" />
+                <span class="text-gray-700 text-sm"><strong>Price includes GST & transport</strong></span>
               </li>
             </ul>
             <button
               class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-2xl font-semibold transition-all duration-200 hover:scale-105">
-              Order Now
+              Get Starter Samples
             </button>
           </div>
 
+          <!-- ₹2,999 Brand Launch Preparation Kit -->
           <div
             class="bg-white rounded-3xl p-8 border-2 border-emerald-500 relative hover:shadow-xl transition-all duration-300">
             <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -514,60 +528,86 @@
             </div>
             <div class="text-center mb-8">
               <div class="text-4xl font-bold text-emerald-600 mb-2">₹2,999</div>
-              <div class="text-gray-600 font-medium">Professional Kit</div>
+              <div class="text-gray-600 font-medium">Brand Launch & Strategy Kit</div>
+            </div>
+            <div class="mb-6">
+              <p class="text-center text-sm text-gray-600">Brands planning market entry or private labels</p>
             </div>
             <ul class="space-y-4 mb-8">
               <li class="flex items-start gap-3">
                 <UIcon name="i-heroicons-check" class="text-emerald-500 flex-shrink-0 mt-1" />
-                <span class="text-gray-700 text-sm">Premium grade samples</span>
+                <span class="text-gray-700 text-sm"><strong>1.5 kg customised sample kit</strong> (weights & grades
+                  tailored
+                  to your target market)</span>
               </li>
               <li class="flex items-start gap-3">
                 <UIcon name="i-heroicons-check" class="text-emerald-500 flex-shrink-0 mt-1" />
-                <span class="text-gray-700 text-sm">5-7 product varieties</span>
+                <span class="text-gray-700 text-sm"><strong>1-on-1 consultancy (4 hours)</strong></span>
               </li>
               <li class="flex items-start gap-3">
                 <UIcon name="i-heroicons-check" class="text-emerald-500 flex-shrink-0 mt-1" />
-                <span class="text-gray-700 text-sm">Detailed lab reports</span>
+                <span class="text-gray-700 text-sm">Market insights & category-level research data</span>
               </li>
               <li class="flex items-start gap-3">
                 <UIcon name="i-heroicons-check" class="text-emerald-500 flex-shrink-0 mt-1" />
-                <span class="text-gray-700 text-sm">Packaging consultation</span>
+                <span class="text-gray-700 text-sm">Packaging & grade-selection guidance</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <UIcon name="i-heroicons-check" class="text-emerald-500 flex-shrink-0 mt-1" />
+                <span class="text-gray-700 text-sm">Opportunity discussion to enter the makhana segment
+                  strategically</span>
               </li>
             </ul>
             <button
               class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-2xl font-semibold transition-all duration-200 hover:scale-105">
-              Order Now
+              Book Consultation & Samples
             </button>
           </div>
 
+          <!-- ₹9,999 Enterprise Entry & Strategy Kit -->
           <div class="bg-white rounded-3xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
             <div class="text-center mb-8">
               <div class="text-4xl font-bold text-emerald-600 mb-2">₹9,999</div>
-              <div class="text-gray-600 font-medium">Enterprise Kit</div>
+              <div class="text-gray-600 font-medium">Enterprise Market Entry Kit</div>
+            </div>
+            <div class="mb-6">
+              <p class="text-center text-sm text-gray-600">Enterprises, distributors & serious market entrants</p>
             </div>
             <ul class="space-y-4 mb-8">
               <li class="flex items-start gap-3">
                 <UIcon name="i-heroicons-check" class="text-emerald-500 flex-shrink-0 mt-1" />
-                <span class="text-gray-700 text-sm">Export-grade samples</span>
+                <span class="text-gray-700 text-sm"><strong>7 kg comprehensive sample kit</strong></span>
               </li>
               <li class="flex items-start gap-3">
                 <UIcon name="i-heroicons-check" class="text-emerald-500 flex-shrink-0 mt-1" />
-                <span class="text-gray-700 text-sm">Complete product range</span>
+                <span class="text-gray-700 text-sm"><strong>1-on-1 strategic discussion (10 hours)</strong></span>
               </li>
               <li class="flex items-start gap-3">
                 <UIcon name="i-heroicons-check" class="text-emerald-500 flex-shrink-0 mt-1" />
-                <span class="text-gray-700 text-sm">Full compliance reports</span>
+                <span class="text-gray-700 text-sm">Processed & curated <strong>market-specific client
+                    data</strong></span>
               </li>
               <li class="flex items-start gap-3">
                 <UIcon name="i-heroicons-check" class="text-emerald-500 flex-shrink-0 mt-1" />
-                <span class="text-gray-700 text-sm">Brand strategy session</span>
+                <span class="text-gray-700 text-sm">Supply chain & sourcing clarity</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <UIcon name="i-heroicons-check" class="text-emerald-500 flex-shrink-0 mt-1" />
+                <span class="text-gray-700 text-sm">Business readiness support to confidently start operations</span>
               </li>
             </ul>
             <button
               class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-2xl font-semibold transition-all duration-200 hover:scale-105">
-              Order Now
+              Start with Enterprise Support
             </button>
           </div>
+        </div>
+
+        <!-- Supporting Line -->
+        <div class="mt-16 text-center">
+          <p class="text-gray-600 mb-4">From product understanding to market entry strategy—choose the level of support
+            you
+            need.</p>
         </div>
       </div>
     </section>
@@ -639,11 +679,7 @@
                   class="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
                   <UIcon name="i-heroicons-user" class="text-white text-3xl md:text-4xl" />
                 </div>
-                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4">Visionary Leadership</h3>
-                <p class="text-gray-600 leading-relaxed mb-4 md:mb-6">Leading BMAI with passion for quality and
-                  commitment
-                  to
-                  empowering businesses with premium makhana solutions.</p>
+
                 <div class="grid grid-cols-3 gap-2 md:gap-4 text-center">
                   <div>
                     <div class="text-xl md:text-2xl font-bold text-emerald-600">30+</div>
@@ -671,7 +707,11 @@
       </div>
     </section>
 
-    <!-- testomonial section  -->
+
+
+
+
+
 
     <!-- Testimonials Section -->
     <section class="py-24 bg-white">
@@ -767,6 +807,118 @@
       </div>
     </section>
 
+    <!-- Media / Gallery Section -->
+    <section id="media" class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
+            See Our Makhana Journey
+          </h2>
+          <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+            From harvest to your shelf—transparent processing you can trust
+          </p>
+        </div>
+
+        <!-- Image Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+          <div v-for="(img, i) in gallery" :key="i"
+            class="group relative rounded-2xl overflow-hidden shadow hover:shadow-xl transition-all duration-300 cursor-pointer">
+            <img :src="img.src" :alt="img.alt"
+              class="w-full h-48 md:h-56 object-contain group-hover:scale-105 transition-transform duration-300" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <p class="text-white text-sm font-medium">{{ img.caption }}</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 md:mb-16">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            Get in Touch
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Ready to start your makhana journey? Reach out for samples, pricing, or any questions.
+          </p>
+        </div>
+
+        <div class="">
+
+          <!-- Contact Info & Map -->
+          <div class="space-y-6 max-w-2xl mx-auto">
+            <!-- Contact Cards -->
+            <div class="grid md:grid-cols-2 gap-3">
+              <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                <div class="flex items-center gap-2 mb-2">
+                  <div class="w-8 h-8 bg-emerald-100 rounded-md flex items-center justify-center">
+                    <UIcon name="i-heroicons-phone" class="text-emerald-600" />
+                  </div>
+                  <h3 class="font-semibold text-gray-900 text-sm">Call Us</h3>
+                </div>
+                <a href="tel:+919876543210" class="text-emerald-600 font-medium text-sm hover:underline">
+                  +91 98765 43210
+                </a>
+                <p class="text-xs text-gray-600 mt-1">Mon-Sat, 9AM-6PM IST</p>
+              </div>
+
+              <div class="bg-blue-50 rounded-lg p-4 border border-blue-200">
+                <div class="flex items-center gap-2 mb-2">
+                  <div class="w-8 h-8 bg-blue-100 rounded-md flex items-center justify-center">
+                    <UIcon name="i-heroicons-envelope" class="text-blue-600" />
+                  </div>
+                  <h3 class="font-semibold text-gray-900 text-sm">Email Us</h3>
+                </div>
+                <a href="mailto:hello@bmai.com" class="text-blue-600 font-medium text-sm hover:underline">
+                  hello@bmai.com
+                </a>
+                <p class="text-xs text-gray-600 mt-1">We reply within 24 hours</p>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+              <div class="flex items-center gap-2 mb-2">
+                <div class="w-8 h-8 bg-gray-100 rounded-md flex items-center justify-center">
+                  <UIcon name="i-heroicons-map-pin" class="text-gray-600" />
+                </div>
+                <h3 class="font-semibold text-gray-900 text-sm">Visit Us</h3>
+              </div>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                BMAI Processing Unit<br />
+                Industrial Area, Darbhanga<br />
+                Bihar, India - 846004
+              </p>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex gap-3 justify-center">
+              <a href="#"
+                class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-emerald-100 hover:text-emerald-600 transition-all duration-200"
+                aria-label="WhatsApp">
+                <UIcon name="i-mdi-whatsapp" class="text-lg" />
+              </a>
+              <a href="#"
+                class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-blue-100 hover:text-blue-600 transition-all duration-200"
+                aria-label="LinkedIn">
+                <UIcon name="i-mdi-linkedin" class="text-lg" />
+              </a>
+              <a href="#"
+                class="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-pink-100 hover:text-pink-600 transition-all duration-200"
+                aria-label="Instagram">
+                <UIcon name="i-mdi-instagram" class="text-lg" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <footer class="bg-gray-100 text-black">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -843,7 +995,60 @@ useHead({
 
 import { ref } from 'vue'
 const mobileOpen = ref(false)
-
+const gallery = [
+  {
+    src: '/media/1.jpeg',
+    alt: 'img',
+  },
+  {
+    src: '/media/2.jpeg',
+    alt: 'img',
+  },
+  {
+    src: '/media/3.jpeg',
+    alt: 'img',
+  },
+  {
+    src: '/media/4.jpeg',
+    alt: 'img',
+  },
+  {
+    src: '/media/5.jpeg',
+    alt: 'img',
+  },
+  {
+    src: '/media/6.jpeg',
+    alt: 'img',
+  },
+  {
+    src: '/media/7.jpeg',
+    alt: 'img',
+  },
+  {
+    src: '/media/8.jpeg',
+    alt: 'img',
+  },
+  {
+    src: '/media/9.jpeg',
+    alt: 'img',
+  },
+  {
+    src: '/media/10.jpeg',
+    alt: 'img',
+  },
+  {
+    src: '/media/11.jpeg',
+    alt: 'img',
+  },
+  {
+    src: '/media/12.jpeg',
+    alt: 'img',
+  },
+  {
+    src: '/media/13.jpeg',
+    alt: 'img',
+  },
+]
 const items = ref([
   {
     title: 'Market Consultation',
@@ -889,6 +1094,29 @@ const handleSubmit = (e) => {
   console.log('Form submitted:', formData.value)
 }
 
+const problems = [
+  {
+    title: "Quality & Grading Uncertainty",
+    description: "No standardized grading leads to inconsistent batches and customer complaints.",
+    icon: "i-heroicons-beaker"
+  },
+  {
+    title: "High Packaging Waste",
+    description: "Wrong size selection increases your packaging costs by up to 30%.",
+    icon: "i-heroicons-scissors"
+  },
+  {
+    title: "Contamination & Brand Risk",
+    description: "Poor storage and handling risks moisture damage and contamination.",
+    icon: "i-heroicons-shield-check"
+  },
+  {
+    title: "Supply Chain Gaps",
+    description: "Inconsistent delivery schedules disrupt your production and retail shelf presence.",
+    icon: "i-heroicons-arrows-right-left"
+  }
+]
+
 const features = [
   {
     icon: 'i-heroicons-star-solid',
@@ -926,7 +1154,7 @@ const features = [
 
 const stats = [
   { value: '30+', label: 'Partner Brands' },
-  { value: '500+', label: 'Tons Monthly' },
+  { value: '100+', label: 'Tons Monthly' },
   { value: '100%', label: 'Quality Assured' },
   { value: '24/7', label: 'Support Available' }
 ];
